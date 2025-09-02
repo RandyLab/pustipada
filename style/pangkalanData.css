@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f0f4ff; /* biru muda untuk latar dasar */
+  color: #333;
+}
+
+/* Navbar fixed */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #0066cc; /* biru */
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav .logo {
+  height: 40px;
+}
+nav .nav-center h2 {
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+}
+.iconMenu {
+  height: 30px;
+  cursor: pointer;
+  filter: brightness(0) invert(1); /* biar icon jadi putih */
+}
+
+/* Menu Mobile */
+.container-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: flex-end;
+  z-index: 2000;
+}
+.container-menu.active {
+  display: flex;
+}
+menu {
+  background: #fff;
+  width: 250px;
+  padding: 20px;
+  height: 100%;
+  animation: slideIn 0.3s ease forwards;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.iconBackMenu {
+  height: 25px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+menu ul {
+  list-style: none;
+  padding: 0;
+}
+menu ul li {
+  margin: 15px 0;
+}
+menu ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: 0.3s;
+}
+menu ul li a:hover {
+  color: #007bff;
+}
+
+/* Hero Section pakai gambar di HTML */
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px 100px;
+  margin-top: 60px; /* biar tidak ketimpa navbar */
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* biar full layar */
+  z-index: -2; /* biar di belakang teks */
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 50, 0.55); /* lapisan biru transparan */
+  z-index: -1;
+}
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+  padding: 20px 30px;
+}
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.btn-main {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn-main:hover {
+  background: #0056b3;
+}
+
+/* ====== Perbaikan Section Info & Fitur ====== */
+.info-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.info-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #004080;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+.section-description {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 auto 40px;
+  max-width: 750px;
+}
+/* Beda background biar kontras */
+#pangkalan-data {
+  background: #f9fbff;
+}
+#fitur-utama {
+  background: #ffffff;
+}
+
+/* Feature Cards */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+.card {
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+}
+.feature-cards .card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.feature-cards .card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.feature-cards .card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.feature-cards .card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.feature-cards .card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card:hover {
+  transform: scale(2.07);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.card i {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0066cc;
+  color: #fff;
+  margin-top: 40px;
+}
+/* Efek klik pada card */
+.card:active {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.15s ease;
+}

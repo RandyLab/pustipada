@@ -1,0 +1,249 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil PUSTIPADA</title>
+    <link rel="stylesheet" href="style/internet.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <img class="logo" src="img/icon.png" alt="PUSTIPADA" />
+      <h2>PUSTIPADA</h2>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+          <a href="#" onclick="toggleDropdown(event)"
+            >Menu <span style="font-size: 1.1em">▼</span></a
+          >
+          <ul class="dropdown-content" id="dropdownContent">
+            <li><a href="#infrastrktur">Infrastruktur</a></li>
+            <li><a href="#tujuan">Tujuan</a></li>
+            <li><a href="#dampak">Dampak</a></li>
+          </ul>
+        </li>
+        <li>
+          <img
+            src="img/iconMenu.png"
+            alt="menu"
+            class="iconMenu"
+            onclick="bukaMenu()"
+          />
+        </li>
+      </ul>
+    </nav>
+    <section id="home">
+      <div class="kotak-paragraf-jaringan">
+        <h2 class="judul-pusat" id="infrastrktur">Jaringan Internet</h2>
+        <p>
+          PUSTIPADA UINSU Tuntungan menyediakan infrastruktur jaringan internet
+          yang modern dan handal untuk mendukung seluruh aktivitas akademik,
+          penelitian, dan pengelolaan data pertanian serta perdesaan. Jaringan
+          internet di PUSTIPADA dirancang agar dapat diakses dengan mudah oleh
+          mahasiswa, dosen, peneliti, dan seluruh civitas akademika.
+        </p>
+      </div>
+      <div class="infra-layanan-card" id="tujuan">
+        <h3>🛠️ Infrastruktur & Layanan</h3>
+        <ul>
+          <li>
+            <b>Jaringan LAN & Wi-Fi:</b> Tersedia di berbagai gedung kampus
+            untuk mahasiswa, dosen, dan staf.
+          </li>
+          <li>
+            <b>Server & Data Center:</b> Menyimpan data akademik, administrasi,
+            dan layanan digital kampus.
+          </li>
+          <li>
+            <b>Sistem Informasi Akademik (SIA):</b> Terintegrasi dengan jaringan
+            internet untuk akses nilai, KRS, dan informasi kuliah.
+          </li>
+          <li>
+            <b>Kolaborasi Eksternal:</b> PUSTIPADA bekerja sama dengan penyedia
+            layanan internet dan institusi lain untuk meningkatkan kualitas
+            jaringan.
+          </li>
+        </ul>
+      </div>
+      <div class="tujuan-jaringan-card" id="dampak">
+        <h3>🎯 Tujuan Pengembangan Jaringan</h3>
+        <ul>
+          <li>Mendukung transformasi digital kampus.</li>
+          <li>
+            Menyediakan akses internet stabil dan aman untuk seluruh civitas
+            akademika.
+          </li>
+          <li>
+            Meningkatkan efisiensi pengambilan keputusan berbasis data melalui
+            sistem terintegrasi.
+          </li>
+        </ul>
+      </div>
+      <div class="dampak-jaringan-card">
+        <h3>📈 Dampak Positif</h3>
+        <ul>
+          <li>Mempermudah akses ke sumber belajar online.</li>
+          <li>Mendukung kegiatan riset dan publikasi ilmiah.</li>
+          <li>Mempercepat proses administrasi dan layanan kampus.</li>
+        </ul>
+      </div>
+      <div
+        class="container-informasi"
+        style="
+          display: flex;
+          flex-wrap: wrap;
+          gap: 2rem;
+          justify-content: center;
+        "
+      >
+        <div class="jaringan-card">
+          <div class="icon-bg">
+            <img
+              src="img/aksesJaringan.jpg"
+              alt="WiFi"
+              class="icon-jaringan"
+              onclick="showImageModal(this)"
+            />
+          </div>
+          <h3 style="margin-bottom: 8px; color: #11831b">Akses WiFi Cepat</h3>
+          <p>
+            Area PUSTIPADA dilengkapi dengan jaringan WiFi berkecepatan tinggi
+            yang dapat diakses di seluruh ruangan dan area publik.
+          </p>
+        </div>
+        <div class="jaringan-card">
+          <div class="icon-bg">
+            <img
+              src="img/ServerData.jpg"
+              alt="Server"
+              class="icon-jaringan"
+              onclick="showImageModal(this)"
+            />
+          </div>
+          <h3 style="margin-bottom: 8px; color: #11831b">
+            Server Data Terpusat
+          </h3>
+          <p>
+            Seluruh data pertanian dan perdesaan tersimpan aman di server
+            terpusat dengan sistem keamanan berlapis.
+          </p>
+        </div>
+        <div class="jaringan-card">
+          <div class="icon-bg">
+            <img
+              src="img/It.jpg"
+              alt="Support"
+              class="icon-jaringan"
+              onclick="showImageModal(this)"
+            />
+          </div>
+          <h3 style="margin-bottom: 8px; color: #11831b">
+            Dukungan IT Profesional
+          </h3>
+          <p>
+            Tim IT PUSTIPADA siap membantu dan memastikan jaringan internet
+            berjalan lancar tanpa gangguan.
+          </p>
+        </div>
+        <div class="jaringan-card">
+          <div class="icon-bg">
+            <img
+              src="img/cloud.jpg"
+              alt="Cloud"
+              class="icon-jaringan"
+              onclick="showImageModal(this)"
+            />
+          </div>
+          <h3 style="margin-bottom: 8px; color: #11831b">
+            Akses Cloud & Data Online
+          </h3>
+          <p>
+            Pengguna dapat mengakses data dan aplikasi berbasis cloud secara
+            online, kapan saja dan di mana saja.
+          </p>
+        </div>
+      </div>
+      <div style="margin: 2.5rem auto 0; max-width: 700px; text-align: center">
+        <p style="font-size: 1.1rem">
+          Dengan jaringan internet yang stabil dan fasilitas digital yang
+          lengkap, PUSTIPADA mendukung terciptanya lingkungan belajar, riset,
+          dan pengelolaan data yang modern serta efisien.<br /><br />
+          <b>Internet cepat, kolaborasi lancar, inovasi tanpa batas!</b>
+        </p>
+      </div>
+    </section>
+    <div id="imgModal" class="img-modal" onclick="closeImageModal()">
+      <span
+        class="img-modal-close"
+        onclick="closeImageModal(); event.stopPropagation()"
+        >&times;</span
+      >
+      <img class="img-modal-content" id="imgModalContent" />
+    </div>
+    <div class="container-menu" id="containerMenu">
+      <div class="menu-overlay" onclick="tutupMenu()"></div>
+      <menu id="menuMobile">
+        <img
+          src="img/iconBack.png"
+          alt="back"
+          class="iconBackMenu"
+          onclick="tutupMenu(); event.stopPropagation();"
+        />
+        <ul>
+          <li><a href="#home" onclick="tutupMenu()">Home</a></li>
+          <li>
+            <a href="#infrastruktur" onclick="tutupMenu()">Infrastruktur</a>
+          </li>
+          <li>
+            <a href="#tujuan" onclick="tutupMenu()">Tujuan Pembelajaran</a>
+          </li>
+          <li><a href="#dampak" onclick="tutupMenu()">Dampak Positif</a></li>
+        </ul>
+      </menu>
+    </div>
+    <script>
+      function toggleDropdown(e) {
+        e.preventDefault();
+        document.getElementById("dropdownContent").classList.toggle("show");
+      }
+      document.addEventListener("click", function (event) {
+        const dropdown = document.getElementById("dropdownContent");
+        if (dropdown && !dropdown.parentElement.contains(event.target)) {
+          dropdown.classList.remove("show");
+        }
+      });
+      function showImageModal(img) {
+        event.stopPropagation();
+        var modal = document.getElementById("imgModal");
+        var modalImg = document.getElementById("imgModalContent");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        setTimeout(() => {
+          modalImg.classList.add("show");
+        }, 10);
+      }
+      function closeImageModal() {
+        var modal = document.getElementById("imgModal");
+        var modalImg = document.getElementById("imgModalContent");
+        modalImg.classList.remove("show");
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 200);
+      }
+      function tutupMenu() {
+        document.getElementById("containerMenu").classList.remove("active");
+        setTimeout(function () {
+          document.getElementById("containerMenu").style.display = "none";
+        }, 300);
+      }
+      function bukaMenu() {
+        document.getElementById("containerMenu").classList.add("active");
+        document.getElementById("containerMenu").style.display = "block";
+      }
+    </script>
+  </body>
+</html>

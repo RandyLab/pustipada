@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pangkalan Data PUSTIPADA UIN Sumatera Utara</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/pangkalandata.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav-left">
+        <img class="logo" src="img/icon.png" alt="PUSTIPADA" />
+      </div>
+      <div class="nav-center"><h2>PUSTIPADA</h2></div>
+      <div class="nav-right">
+        <img
+          src="img/iconMenu.png"
+          alt="menu"
+          class="iconMenu"
+          onclick="bukaMenu()"
+        />
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <img src="img/Data.jpg" alt="Background Data" class="hero-bg" />
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Selamat Datang di Pangkalan Data PUSTIPADA</h1>
+        <p>
+          Pangkalan Data mendukung pengelolaan informasi yang terintegrasi,
+          mudah diakses, dan aman.
+        </p>
+        <a href="#pangkalan-data" class="btn-main">Pelajari Lebih Lanjut</a>
+      </div>
+    </div>
+
+    <!-- Info Section -->
+    <section id="pangkalan-data" class="info-section">
+      <div class="info-container">
+        <h2 class="section-title">
+          Pangkalan Data PUSTIPADA UIN Sumatera Utara
+        </h2>
+        <p class="section-description">
+          Pangkalan Data PUSTIPADA adalah layanan digital terpusat yang
+          menyediakan akses informasi akademik, administrasi, dan kepegawaian
+          secara cepat, akurat, dan transparan.
+        </p>
+      </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section id="fitur-utama" class="info-section feature-section">
+      <div class="info-container">
+        <h2 class="section-title">Fitur Unggulan Pangkalan Data</h2>
+        <div class="feature-cards">
+          <div class="card">
+            <i class="fas fa-database"></i>
+            <h3>Integrasi Data</h3>
+            <p>
+              Data terpusat yang mendukung pengambilan keputusan lebih cepat.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-chart-bar"></i>
+            <h3>Analisis & Laporan</h3>
+            <p>
+              Dashboard interaktif untuk memantau data kampus secara real-time.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-lock"></i>
+            <h3>Keamanan Tingkat Tinggi</h3>
+            <p>Perlindungan dengan enkripsi dan backup otomatis.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Akses Multi-Platform</h3>
+            <p>
+              Dapat diakses dengan lancar melalui perangkat mobile dan desktop.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-headset"></i>
+            <h3>Dukungan Teknis</h3>
+            <p>Tim helpdesk siap mendukung civitas akademika setiap saat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 PUSTIPADA UIN Sumatera Utara.</p>
+    </footer>
+
+    <!-- Menu Mobile -->
+    <div class="container-menu" id="overlay">
+      <menu id="menu">
+        <img
+          src="img/iconBack.png"
+          alt="back"
+          class="iconBackMenu"
+          onclick="tutupMenu()"
+        />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#pangkalan-data" onclick="tutupMenu()">Pangkalan Data</a>
+          </li>
+          <li><a href="#fitur-utama" onclick="tutupMenu()">Fitur Utama</a></li>
+        </ul>
+      </menu>
+    </div>
+
+    <script>
+      function bukaMenu() {
+        document.querySelector(".container-menu").classList.add("active");
+      }
+      function tutupMenu() {
+        document.querySelector(".container-menu").classList.remove("active");
+      }
+      document
+        .getElementById("overlay")
+        .addEventListener("click", function (e) {
+          if (e.target.id === "overlay") {
+            tutupMenu();
+          }
+        });
+    </script>
+  </body>
+</html>

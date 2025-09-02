@@ -1,0 +1,163 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil PUSTIPADA</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <img class="logo" src="img/icon.png" alt="PUSTIPADA" />
+      <h2>PUSTIPADA</h2>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <img
+          src="img/iconMenu.png"
+          alt="menu"
+          class="iconMenu"
+          id="iconMenu"
+          onclick="bukaMenu()"
+        />
+      </ul>
+    </nav>
+    <section id="home">
+      <div class="gambar-home">
+        <img src="img/gedungUinsu.jpg" alt="Gedung Perpustakaan" />
+        <div class="wrapper-selamatDatang">
+          <p>Selamat Datang di Pusat Teknologi Informasi dan Pangkalan Data</p>
+        </div>
+      </div>
+    </section>
+    <section id="container-informasi">
+      <div class="container-informasi">
+        <a href="sistemInformasi.html">
+          <div class="sistemInformasi wrapperInformasi">
+            <h3>Sistem Informasi</h3>
+            <p>
+              Taka Kelola Sistem Informasi yang ada di lingkungan UIN Sumatera
+              Utara
+            </p>
+          </div>
+        </a>
+        <a href="jaringanInternet.html">
+          <div class="jaringanInternet wrapperInformasi">
+            <h3>Jaringan Internet</h3>
+            <p>
+              Penyediaan Jaringan Internet untuk mendukung proses pembelajaran
+              di UIN Sumatera Utara
+            </p>
+          </div>
+        </a>
+        <a href="pangkalanData.html">
+          <div class="pangkalanData wrapperInformasi">
+            <h3>Pangkalan Data</h3>
+            <p>
+              Penyediaan Pangkalan Data untuk mendukung proses pembelajaran di
+              UIN Sumatera Utara
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="center timPustipada">
+      <img src="../Web PUSTIPADA/img/timPustipada.jpg" alt="Tim PUSTIPADA" />
+    </div>
+    <section class="about" id="about">
+      <h2>Tentang PUSTIPADA</h2>
+      <p>
+        PUSTIPADA (Pusat Teknologi Informasi dan Pangkalan Data) adalah unit
+        yang bertanggung jawab dalam pengelolaan teknologi informasi dan
+        pangkalan data di lingkungan UIN Sumatera Utara. PUSTIPADA memiliki
+        peran penting dalam mendukung proses pembelajaran, penelitian, dan
+        administrasi di universitas ini.
+      </p>
+      <p>
+        Visi PUSTIPADA adalah menjadi pusat teknologi informasi dan pangkalan
+        data yang unggul dan terpercaya dalam mendukung visi dan misi UIN
+        Sumatera Utara. Misi PUSTIPADA meliputi penyediaan layanan teknologi
+        informasi yang handal, pengembangan sistem informasi yang inovatif,
+        serta pengelolaan pangkalan data yang aman dan efisien.
+      </p>
+      <p>
+        Dengan adanya PUSTIPADA, diharapkan seluruh civitas akademika UIN
+        Sumatera Utara dapat memanfaatkan teknologi informasi secara optimal
+        untuk meningkatkan kualitas pendidikan dan penelitian di universitas
+        ini.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>Email:pustiecek45@gmail.com</p>
+      <p>Phone: +62 812-3456-7890</p>
+      <p>
+        Address: Jl. Lap. Golf No.120, Kp. Tengah, Kec. Pancur Batu, Kabupaten
+        Deli Serdang, Sumatera Utara 20353
+      </p>
+      <div class="social-media">
+        <a href="#"><img src="img/iconFacebook.png" alt="Facebook" /></a>
+        <a href="#"><img src="img/iconTwitter.png" alt="Twitter" /></a>
+        <a href="#"><img src="img/iconInstagram.png" alt="Instagram" /></a>
+      </div>
+      <div class="containerMaps">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254874.3294320546!2d98.43202254012338!3d3.4917825831623097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312542e8f74ddb%3A0x817d3a77975e0ef3!2sGedung%20Administrasi%20UIN-SU!5e0!3m2!1sid!2sid!4v1756356125752!5m2!1sid!2sid"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p>Copyright &copy; 2024 PUSTIPADA UIN Sumatera Utara</p>
+    </footer>
+
+    <div id="menu" class="container-menu" onclick="tutupMenu()">
+      <menu>
+        <img
+          src="img/iconBack.png"
+          alt="back"
+          class="iconBackMenu"
+          onclick="tutupMenu()"
+        />
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="sistemInformasi.html">Sistem Informasi</a></li>
+          <li><a href="jaringanInternet.html">Jaringan Internet</a></li>
+          <li><a href="pangkalanData.html">Pangkalan Data</a></li>
+        </ul>
+      </menu>
+    </div>
+    <script>
+      function tutupMenu() {
+        let menu = document.getElementById("menu");
+        let iconMenu = document.getElementById("iconMenu");
+
+        menu.style.display = "none";
+        iconMenu.style.display = "block";
+      }
+      function bukaMenu() {
+        let menu = document.getElementById("menu");
+        let iconMenu = document.getElementById("iconMenu");
+
+        menu.style.display = "flex";
+        iconMenu.style.display = "none";
+      }
+    </script>
+  </body>
+</html>
