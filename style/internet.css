@@ -13,6 +13,8 @@ body {
   min-height: 100vh;
   position: relative;
   background-color: #e6f9ec; /* warna dasar hijau muda */
+  font-family: "Domine", serif !important;
+  font-optical-sizing: auto;
 }
 body::before {
   content: "";
@@ -33,7 +35,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
-  background-color: white;
+  background-color: rgba(154, 230, 151, 0.829);
   padding: 10px 0;
   z-index: 99;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tambahkan sedikit bayangan */
@@ -57,6 +59,12 @@ nav .logo-link:active {
   /* Efek saat disentuh/diklik */
   opacity: 0.6;
   transform: scale(0.98);
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  filter: drop-shadow(rgb(102, 236, 61) 1px 5px 4px);
 }
 
 .logo {
@@ -97,6 +105,8 @@ nav .logo-link:active {
   font-size: 1.2rem;
   border-radius: 5px;
   transition: background-color 0.2s, transform 0.1s;
+  font-family: "Domine", serif !important;
+  font-optical-sizing: auto;
 }
 
 .iconMenu {
@@ -493,6 +503,7 @@ li {
   z-index: 100;
   padding: 0.5rem 0;
   animation: fadeInDropdown 0.2s;
+  transform: translateX(-45%);
 }
 .menu .dropdown-content li {
   list-style: none;
