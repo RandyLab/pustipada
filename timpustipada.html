@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Organisasi PUSTIPADA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/struktur.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <img class="logo" src="img/icon.png" alt="PUSTIPADA" />
+      </div>
+      <div class="nav-center">
+        <h2>PUSTIPADA</h2>
+      </div>
+      <div class="nav-right">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kegiatanPKL.html">Kegiatan</a></li>
+          <li><a href="hppy.html">Galery</a></li>
+        </ul>
+        <img
+          src="img/iconMenu.png"
+          alt="menu"
+          class="iconMenu"
+          onclick="bukaMenu()"
+        />
+      </div>
+    </nav>
+
+    <div class="center">
+      <div class="hero-section">
+        <img src="img/timPustipada.png" alt="Tim Pustipada" />
+        <div class="hero-content">
+          <div class="text-hero">
+            <h1>Struktur Organisasi PUSTIPADA</h1>
+            <p>
+              Mengenal tim dan anggota PUSTIPADA. Pilar teknologi dan informasi
+              kampus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="struktur-organisasi" class="info-section">
+      <h2 class="section-title">Bagan Struktur Organisasi</h2>
+      <div class="org-chart-container">
+        <div class="row kepala-row">
+          <div class="bagian kepala-unit">
+            <img
+              src="img/timPustipada/pak ikhsan4.jpeg"
+              alt="Pak Ikhsan"
+              class="member-img"
+            />
+            <h3>Muhammad Ikhsan S.T, M.Kom</h3>
+            <p>Kepala PUSTIPADA</p>
+          </div>
+        </div>
+
+        <div class="row first-level">
+          <div class="bagian">
+            <img
+              src="img/timPustipada/pak habibi.jpg"
+              alt="Habibi"
+              class="member-img"
+            />
+            <h3>Ali Habibi</h3>
+            <p>Database Administrator</p>
+          </div>
+          <div class="bagian">
+            <img
+              src="img/timPustipada/pak bambang2.jpg"
+              alt="Cory"
+              class="member-img"
+            />
+            <h3>Bambang Suhardi</h3>
+            <p>Networking</p>
+          </div>
+          <div class="bagian">
+            <img
+              src="img/timPustipada/pak akhyar.jpg"
+              alt="Ibnu"
+              class="member-img"
+            />
+            <h3>Akhyar Aslam Sipahutar</h3>
+            <p>Database Administrator</p>
+          </div>
+        </div>
+
+        <div class="row second-level">
+          <div class="bagian">
+            <img
+              src="img/timPustipada/pakibnu.jpg"
+              alt="Akhyar"
+              class="member-img"
+            />
+            <h3>Ibnu Rauydi</h3>
+            <p>IT Service Manager</p>
+          </div>
+          <div class="bagian">
+            <img
+              src="img/timPustipada/pak Qry2.jpg"
+              alt="Bambang"
+              class="member-img"
+            />
+            <h3>M. Alqusyairi Munir</h3>
+            <p>Graphic Designer</p>
+          </div>
+          <div class="bagian">
+            <img
+              src="img/timPustipada/pak wiwit.jpg"
+              alt="Wiwit"
+              class="member-img"
+            />
+            <h3>Wiwit Santoso</h3>
+            <p>IT Infrastruktur</p>
+          </div>
+        </div>
+
+        <div class="row third-level">
+          <div class="bagian">
+            <img
+              src="img/timPustipada/kak tari.jpg"
+              alt="Tari"
+              class="member-img"
+            />
+            <h3>Utari Anggita</h3>
+            <p>Multimedia Specialist</p>
+          </div>
+          <div class="bagian">
+            <img
+              src="img/timPustipada/pak ismail.jpg"
+              alt="Ismail"
+              class="member-img"
+            />
+            <h3>Andry Ismail Sitepu</h3>
+            <p>Programer</p>
+          </div>
+          <div class="bagian">
+            <img
+              src="img/timPustipada/kak fina.jpg"
+              alt="Pina"
+              class="member-img"
+            />
+            <h3>Fina Jamaluddin</h3>
+            <p>Multimedia Specialist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container-menu">
+      <menu id="menu">
+        <img
+          src="img/iconBack.png"
+          alt="tutup"
+          class="iconBackMenu"
+          onclick="tutupMenu()"
+        />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kegiatanPKL.html">Kegiatan </a></li>
+          <li><a href="hppy.html">Galery</a></li>
+        </ul>
+      </menu>
+    </div>
+
+    <script>
+      function tutupMenu() {
+        document.querySelector(".container-menu").classList.remove("active");
+      }
+      function bukaMenu() {
+        document.querySelector(".container-menu").classList.add("active");
+      }
+    </script>
+  </body>
+</html>

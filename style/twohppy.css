@@ -1,0 +1,225 @@
+
+:root {
+    --primary-green: #1a4314;
+    --secondary-green: #2b5a25;
+    --light-green: #3c7f31;
+    --pale-green: #e8f5e9;
+    --white: #ffffff;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    min-height: 100vh;
+}
+
+
+.site-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--primary-green);
+}
+
+.site-header .lead {
+    font-size: 1.2em;
+    color: var(--secondary-green);
+}
+
+
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filters {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    border: 2px solid var(--light-green);
+    background-color: var(--white);
+    cursor: pointer;
+    border-radius: 25px;
+    transition: all 0.3s ease; 
+    font-weight: bold;
+    color: var(--primary-green);
+}
+
+.filter-btn:hover {
+    background-color: var(--light-green);
+    color: var(--white);
+    transform: scale(1.05);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.item {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.item img,
+.item video {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.meta {
+    padding: 15px;
+    background: linear-gradient(to bottom, var(--pale-green), var(--white));
+}
+
+.meta h3 {
+    color: var(--primary-green);
+}
+
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 67, 20, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.lightbox.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lb-content {
+    max-width: 90%;
+    max-height: 90%;
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.lb-media img,
+.lb-media video {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+.lb-caption {
+    padding: 15px;
+    text-align: center;
+    background: linear-gradient(to right, var(--pale-green), var(--light-green));
+    color: var(--primary-green);
+}
+
+
+.lb-close, .lb-prev, .lb-next {
+    background: rgba(8, 8, 8, 0.8);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: fixed;
+    z-index: 1010;
+    font-size: 35px;
+    padding: 15px;
+}
+
+.lb-close {
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lb-prev, .lb-next {
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 25px 30px;
+    font-size: 32px;
+    border-radius: 8px;
+}
+
+.lb-prev {
+    left: 20px;
+}
+
+.lb-next {
+    right: 20px;
+}
+
+.lb-close:hover, .lb-prev:hover, .lb-next:hover {
+    background: var(--primary-green);
+    box-shadow: 0 0 20px rgba(8, 8, 8, 0.3);
+}
+
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--white);
+    background: rgba(43, 34, 34, 0.1);
+    backdrop-filter: blur(10px);
+    margin-top: 40px;
+}

@@ -31,6 +31,10 @@ nav {
   color: #eafff3;
   text-shadow: 0 -1px 2px #0b4e06d8, 0 2px 2px #0347188c;
 }
+nav h2 {
+  font-weight: 900;
+  font-family: "Autour One", system-ui;
+}
 .logo {
   max-height: 10vh;
   margin-left: 1rem;
@@ -195,7 +199,7 @@ menu a {
   font-weight: 500;
 }
 .timPustipada img {
-  width: 500px;
+  width: 50%;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -224,6 +228,17 @@ menu a {
   margin-bottom: 1rem;
   font-weight: 400;
   color: #034718;
+}
+
+.about ul {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.about li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #034718;
+  font-weight: 400;
 }
 
 /* CONTACT SECTION */
@@ -289,9 +304,11 @@ footer {
     width: 100%;
   }
   .wrapper-selamatDatang {
-    width: 70vw;
+    width: 100vw;
     margin: 0;
-    padding: 1rem;
+    padding: 0.5rem 0;
+    border-radius: 0;
+    bottom: 10px;
   }
   .wrapper-selamatDatang h2 {
     font-size: 1.5rem;
